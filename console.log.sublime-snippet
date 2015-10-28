@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-console.log("${1:hello world!}")
+console.log("${1:hello world!}");
 ]]></content>
     <tabTrigger>log</tabTrigger>
     <scope>source.js</scope>
