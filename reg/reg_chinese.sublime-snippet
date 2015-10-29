@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+/[\u4E00-\u9FA5]/g
+]]></content>
+    <tabTrigger>regC</tabTrigger>
+    <scope>source.js</scope>
+    <description>中文正则</description>
+</snippet>
