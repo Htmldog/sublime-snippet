@@ -1,0 +1,48 @@
+<snippet>
+    <content><![CDATA[
+/*
+判断是否到达指定时间，或是否在指定时间区间内
+ */
+var IsTime = {
+	toMsec:function(sTime){
+        var arrTime = sTime.split('|');
+
+        var strDate = arrTime[0];
+        var strHours = arrTime[1];
+
+        var arrDate = strDate.split('-');
+        var arrHours = strHours.split('-');
+
+        var date = new Date();
+        date.setFullYear(arrDate[0],arrDate[1],arrDate[2]);
+        date.setHours(arrHours[0],arrHours[1],0,0);
+
+        return Date.parse(date);		
+	},
+	/*
+	参数格式startTime:'2015-9-30|10-25'
+	*/
+	main:function(startTime,endTime){
+		var nowMsec = Date.parse(new Date());
+		startTime = this.toMsec(startTime);
+		endTime = this.toMsec(endTime);
+		if(endTime){
+			if(nowMsec>=startTime & nowMsec < endTime){
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			if(nowMsec>=startTime){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	}
+};
+]]></content>
+    <tabTrigger>isTime</tabTrigger>
+    <scope>source.js</scope>
+    <description>判断是否到达指定时刻(区间)</description>
+</snippet>
