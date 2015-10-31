@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+function ${1:function_name}(){
+	${2}
+}]]></content>
+    <tabTrigger>fn1</tabTrigger>
+    <scope>source.js</scope>
+    <description>Non anonymous Function</description>
+</snippet>
