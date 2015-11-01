@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+/^[1][3578][0-9]{9}\$/
+]]></content>
+    <tabTrigger>regM</tabTrigger>
+    <scope>source.js</scope>
+    <description>手机正则</description>
+</snippet>
